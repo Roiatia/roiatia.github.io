@@ -103,7 +103,7 @@ button:hover {
   transform: translateY(0);
 }
 
-/* כפתור דארק מוד */
+/* ---- dark mode toggle button ---- */
 .theme-toggle {
     margin-left: auto;
     display: flex;
@@ -181,4 +181,49 @@ body.dark-mode .theme-toggle {
     border-color: #374151;
 }
 
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 
+  width: 180px;          
+  height: 52px;         
+  padding: 0;
+  border-radius: 12px;
+
+  font-size: 1.15rem;   
+  font-weight: 600;
+
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* LinkedIn Button */
+.linkedin-btn {
+  background: #6366f1;
+  color: white;
+}
+
+.linkedin-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(99, 102, 241, 0.4);
+}
+
+/* Email Button */
+.email-btn {
+  background: #0f172a;
+  color: white;
+  border: 1px solid #374151;
+}
+
+.email-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
+}
+
+/* icon size */
+.contact-btn i {
+  font-size: 1.2rem;
+}
