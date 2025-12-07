@@ -102,3 +102,83 @@ button:hover {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* כפתור דארק מוד */
+.theme-toggle {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: white;
+    color: var(--dark);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.theme-toggle i {
+    font-size: 1rem;
+}
+
+.theme-toggle:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    transform: translateY(-1px);
+}
+
+/* ---- dark mode ---- */
+
+body.dark-mode {
+    background: linear-gradient(135deg, #020617 0%, #111827 100%);
+    color: var(--light);
+}
+
+body.dark-mode header {
+    background: #020617;
+    color: var(--light);
+}
+
+body.dark-mode a {
+    color: #e5e7eb;
+}
+
+body.dark-mode a:hover {
+    color: var(--secondary);
+}
+
+/* cards and sections on dark background */
+body.dark-mode #skills > div > div,
+body.dark-mode #projects > div > div,
+body.dark-mode #contact {
+    background: #020617 !important;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.7);
+}
+
+/* text */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p {
+    color: #e5e7eb;
+}
+
+/* icons */
+body.dark-mode .tech-icons a {
+    background: #020617;
+    color: #e5e7eb;
+}
+
+body.dark-mode .tech-icons a:hover {
+    background: var(--secondary);
+}
+
+/*dark mode toggle button*/
+body.dark-mode .theme-toggle {
+    background: #020617;
+    color: #e5e7eb;
+    border-color: #374151;
+}
+
+

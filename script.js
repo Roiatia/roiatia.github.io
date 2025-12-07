@@ -1,4 +1,4 @@
-// ✅ Smooth scroll for navigation links
+//  Smooth scroll for navigation links
 document.querySelectorAll("nav a").forEach(link => {
   link.addEventListener("click", function (e) {
     e.preventDefault();
@@ -12,7 +12,7 @@ document.querySelectorAll("nav a").forEach(link => {
 });
 
 
-// ✅ Hover animation for skill & project cards
+//  Hover animation for skill & project cards
 document.querySelectorAll("#skills > div > div, #projects > div > div").forEach(card => {
   card.addEventListener("mouseenter", () => {
     card.style.transform = "translateY(-6px)";
@@ -24,7 +24,7 @@ document.querySelectorAll("#skills > div > div, #projects > div > div").forEach(
 });
 
 
-// ✅ Contact button action (highlight)
+//  Contact button action (highlight)
 const contactBtn = document.querySelector("#contact button");
 
 if (contactBtn) {
@@ -40,13 +40,13 @@ if (contactBtn) {
 }
 
 
-// ✅ Project buttons → example logic
+//  Project buttons
 const projectButtons = document.querySelectorAll("#projects button");
 
 projectButtons.forEach((btn, index) => {
   btn.addEventListener("click", () => {
     if (index === 0) {
-      window.open("https://github.com/Troi", "_blank"); // Budget Manager
+      window.open("https://github.com/Roiatia/Java-simple-Budget-Manager", "_blank"); // Budget Manager
     } else {
       alert("Project will be added soon 🙂");
     }
@@ -54,7 +54,7 @@ projectButtons.forEach((btn, index) => {
 });
 
 
-// ✨✨ Scroll Reveal Animation ✨✨
+//  Scroll Reveal Animation 
 
 const revealElements = [
   document.querySelector("#about"),
@@ -84,3 +84,15 @@ const observer = new IntersectionObserver(
 );
 
 revealElements.forEach(el => observer.observe(el));
+
+
+// Dark Mode Toggle
+const darkModeToggle = document.getElementById("darkModeToggle");
+darkModeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    if (document.body.classList.contains("dark-mode")) {
+        darkModeToggle.innerHTML = '🌞'; 
+    } else {
+        darkModeToggle.innerHTML = '🌙'; 
+    }       
+});
