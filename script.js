@@ -55,7 +55,6 @@ projectButtons.forEach((btn, index) => {
 
 
 //  Scroll Reveal Animation 
-
 const revealElements = [
   document.querySelector("#about"),
   document.querySelector("#skills"),
@@ -79,20 +78,43 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.15 
+    threshold: 0.35 
   }
 );
 
 revealElements.forEach(el => observer.observe(el));
 
 
-// Dark Mode Toggle
+
+// Dark Mode Toggle (Default = Dark)
 const darkModeToggle = document.getElementById("darkModeToggle");
-darkModeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-    if (document.body.classList.contains("dark-mode")) {
-        darkModeToggle.innerHTML = '🌞'; 
-    } else {
-        darkModeToggle.innerHTML = '🌙'; 
-    }       
-});
+
+//default to dark mode
+document.body.classList.add("dark-mode");
+if (darkModeToggle) {
+    darkModeToggle.innerHTML = "🌞";
+}
+
+//check saved theme
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "light") {
+    document.body.classList.remove("dark-mode");
+    if (darkModeToggle) {
+        darkModeToggle.innerHTML = "🌙";
+    }
+}
+
+//toggle dark mode on button click
+if (darkModeToggle) {
+    darkModeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+            darkModeToggle.innerHTML = "🌞";
+            localStorage.setItem("theme", "dark");
+        } else {
+            darkModeToggle.innerHTML = "🌙";
+            localStorage.setItem("theme", "light");
+        }
+    });
+}
