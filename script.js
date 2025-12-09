@@ -47,7 +47,9 @@ projectButtons.forEach((btn, index) => {
   btn.addEventListener("click", () => {
     if (index === 0) {
       window.open("https://github.com/Roiatia/Java-simple-Budget-Manager", "_blank"); // Budget Manager
-    } else {
+    } else if (index === 1) {
+      window.open("https://roiatia.github.io/ShiftManager.github.io/", "_blank"); // Shift Manager
+   } else {
       alert("Project will be added soon 🙂");
     }
   });
