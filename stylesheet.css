@@ -130,73 +130,75 @@ align-items: center;
 
 /*Taken from UIverse.com*/
 .contact-section {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
-.main_card {
+.main_card_circular {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px; 
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
-.social_card {
-    width: 130px;
-    height: 130px;
+.social_circle {
+    width: 80px; 
+    height: 80px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
+    border-radius: 50%;
     text-decoration: none;
-    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.social_card .icon_container {
-    width: 50px;
-    height: 50px;
-    transition: transform 0.4s ease;
+.social_circle .icon_container {
+    width: 35px; 
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
 }
 
-.social_card .icon_container img {
+.social_circle .icon_container img {
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 0 5px rgba(0,0,0,0.2));
 }
 
-.social_card .text {
-    margin-top: 10px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #333; 
-    transition: all 0.4s ease;
+.social_circle:hover {
+    transform: scale(1.15) translateY(-5px); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-color: transparent; 
 }
 
-
-.social_card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    background: rgba(255, 255, 255, 0.2);
+.social_circle:hover .icon_container {
+    transform: scale(1.1); 
 }
 
-.social_card.github:hover { border-bottom: 4px solid #333; }
-.social_card.linkedin:hover { border-bottom: 4px solid #0077b5; }
-.social_card.email:hover { border-bottom: 4px solid #ea4335; }
+.social_circle.github:hover {
+    background: #333; 
+}
 
+.social_circle.linkedin:hover {
+    background: #0077b5; 
+}
 
-[data-theme='dark'] .social_card {
+.social_circle.whatsapp:hover {
+    background: #25D366; 
+}
+
+.social_circle.email:hover {
+    background: #ea4335; 
+}
+
+[data-theme='dark'] .social_circle {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-[data-theme='dark'] .social_card .text {
-    color: #fff;
 }
