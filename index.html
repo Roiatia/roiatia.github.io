@@ -9,7 +9,6 @@
 
   <body>
     <div class="nav-bar">
-      <div class="home"><a href="#home">Roi Atia </a></div>
       <div class="about"><a href="#about-me">About me</a></div>
       <div class="skills"><a href="#skills">Skills</a></div>
       <div class="projects"><a href="#projects">Projects</a></div>
@@ -19,21 +18,29 @@
       </div>
     </div>
 
-    <div class="page-info">
-      <div class="about-me" id="about-me">
-        Hi, I'm Roi. As a Computer Science student at Sapir College, I'm a firm
+    <section class="about-me" id="home">
+    <div class="about-container">
+      <div class="about-box">
+        <div class="about-content">
+        <h1>Hi, </h1>
+        <p>I'm Roi. 
+        <p>As a Computer Science student at Sapir College, I'm a firm
         believer that the best learning happens through hands-on creation. When
         I'm not deep into solving complex equations or writing code, you'll find
         me operating my Bambu Lab A1 Mini 3D printer or building automation
-        tools like Python-based WhatsApp bots. The intersection of hardware,
+        tools like Python-based WhatsApp bots.</p>
+        <p> The intersection of hardware,
         software, and my growing curiosity for Cybersecurity is what drives me
-        forward in every project I take on.
+        forward in every project I take on.</p>
       </div>
+      </div>
+    </div>
+
+      </section>
 
       <div class="skills" id="skills">
   <h2>Coding Languages</h2>
   <div class="skills-container"> 
-    <!-- Python -->
     <div class="skills-cards">
       <div class="card-inner">
         <img src="https://img.icons8.com/?size=100&id=13441&format=png&color=000000" alt="python-icon" />
@@ -88,9 +95,10 @@
 
              <div class="project-card">
               <div class="project-info">
-                <h3>WhatsApp Bot</h3>
-                <p>Python-based bot for automating WhatsApp tasks.</p>
-                <span class="project-tech">Python, Selenium</span>
+                <h3>Comp-Sci IO</h3>
+                <p>Web based hub for Computer Science students.</p>
+                <span class="project-tech">HTML, CSS, JavaScript</span>
+                <button class="project-link" onclick="window.open('https://sapir-flix.vercel.app/', '_blank')">View Project</button>
               </div>
             </div>
 
@@ -99,6 +107,7 @@
                   <h3>3D Printer Automation</h3>
                   <p>Custom scripts to optimize 3D printing workflows.</p>
                   <span class="project-tech">Python, Bambu Lab A1 Mini</span>
+                  <button class="project-link" onclick="window.open('https://github.com/Roiatia/3d-printer-automation', '_blank')">View Project</button>
                 </div>
               </div>
           </div>
